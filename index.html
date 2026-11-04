@@ -28,6 +28,22 @@ img{max-width:100%}
   .float-actions a{flex:1 1 0;justify-content:center;padding:12px 6px !important;font-size:13px !important}
   footer{padding-bottom:72px}
 }
+
+.lbl-short{display:none}
+@media (min-width: 1001px){.hdr{flex-wrap:nowrap !important;gap:12px 28px !important}}
+@media (max-width: 1180px){.main-nav{gap:0 22px !important;font-size:15px !important}}
+@media (max-width: 1000px){
+.hdr{gap:4px 12px !important;padding:0 16px !important}
+.hdr-btns{display:none !important}
+.main-nav{flex:1 1 100% !important;flex-wrap:nowrap !important;overflow-x:auto;justify-content:flex-start !important;gap:0 22px !important;padding-bottom:4px}
+.main-nav a{white-space:nowrap}
+}
+@media (max-width: 760px){
+.prod-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:8px !important}
+.prod-grid > div{padding:20px 10px 18px !important}
+.lbl-long{display:none}
+.lbl-short{display:inline}
+}
 </style>
 </head>
 <body>
@@ -47,19 +63,19 @@ img{max-width:100%}
 
   <!-- 헤더 -->
   <header style="background: #FFFFFF; border-bottom: 1px solid #E5E7EB;">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px; box-sizing: border-box; min-height: 80px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 40px;">
+    <div class="hdr" style="max-width: 1240px; margin: 0 auto; padding: 0 32px; box-sizing: border-box; min-height: 80px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 40px;">
       <a href="#top" style="display: flex; align-items: center; gap: 14px; text-decoration: none; padding: 12px 0;">
         <img src="assets/logo.png" alt="MK Lighting" style="height: 40px; width: auto; display: block;">
         <span style="font-weight: 700; font-size: 18px; color: #111827;">㈜엠케이전기물류</span>
       </a>
-      <nav aria-label="주 메뉴" style="display: flex; flex-wrap: wrap; gap: 0 40px; flex: 1 1 auto; justify-content: flex-end; font-size: 16px; font-weight: 500;">
+      <nav class="main-nav" aria-label="주 메뉴" style="display: flex; flex-wrap: wrap; gap: 0 40px; flex: 1 1 auto; justify-content: flex-end; font-size: 16px; font-weight: 500;">
         <a href="#about" style="text-decoration: none; padding: 12px 0;">회사소개</a>
         <a href="#products" style="text-decoration: none; padding: 12px 0;">제품소개</a>
         <a href="#trade" style="text-decoration: none; padding: 12px 0;">거래안내</a>
         <a href="#stores" style="text-decoration: none; padding: 12px 0;">매장안내</a>
         <a href="#contact" style="text-decoration: none; padding: 12px 0;">견적문의</a>
       </nav>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <div class="hdr-btns" style="display: flex; flex-wrap: nowrap; gap: 8px; flex: 0 0 auto;">
         <a href="https://www.mkmall.shop" style="text-decoration: none; border: 1px solid #D1D5DB; color: #111827; font-weight: 500; font-size: 14px; padding: 12px 16px; border-radius: 8px;">엠케이몰샵</a>
         <a href="#b2b" style="text-decoration: none; background: #1D4ED8; color: #FFFFFF; font-weight: 700; font-size: 14px; padding: 13px 18px; border-radius: 8px;">기업전용 B2B</a>
       </div>
@@ -88,7 +104,7 @@ img{max-width:100%}
         <h2 style="margin: 0; font-weight: 900; font-size: 26px; letter-spacing: -0.03em;">취급 제품군</h2>
         <span style="font-size: 15px; color: #4B5563;">전기·조명 현장에 필요한 자재를 한 곳에서</span>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px;">
+      <div class="prod-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px;">
         
           <div style="background: #F6F7F9; border-radius: 14px; padding: 28px 16px 24px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center;">
             <span style="width: 60px; height: 60px; border-radius: 999px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;">
@@ -562,7 +578,7 @@ img{max-width:100%}
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6"></path><path d="M8 13h8"></path><path d="M8 17h5"></path></svg>견적문의
     </a>
     <a href="#b2b" style="text-decoration: none; background: #0B1A33; color: #FFFFFF; font-weight: 700; font-size: 14px; padding: 14px 18px; border-radius: 10px; box-shadow: 0 8px 24px rgba(17,24,39,0.22); display: flex; align-items: center; gap: 8px;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"></path><path d="M5 21V7l7-4 7 4v14"></path><path d="M9 21v-6h6v6"></path></svg>기업전용 B2B
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"></path><path d="M5 21V7l7-4 7 4v14"></path><path d="M9 21v-6h6v6"></path></svg><span class="lbl-long">기업전용 B2B</span><span class="lbl-short">B2B몰</span>
     </a>
     <a href="#contact" style="text-decoration: none; background: #FEE500; color: #191919; font-weight: 700; font-size: 14px; padding: 14px 18px; border-radius: 10px; box-shadow: 0 8px 24px rgba(17,24,39,0.22); display: flex; align-items: center; gap: 8px;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"></path></svg>카카오톡
